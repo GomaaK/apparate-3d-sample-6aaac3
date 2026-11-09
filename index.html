@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Apparate | 3D UI sample</title>
+<meta name="description" content="A three.js UI sample for the Apparate website: same content, brand and photography, with a woven-thread hero, cloth-ripple product cards and a scroll-driven 3D process.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#0E0E12">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="fonts/belantica.woff" as="font" type="font/woff" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<header class="nav" id="nav">
+  <a class="brand" href="#top" aria-label="Apparate home"><img src="img/image2.webp" alt="Apparate" width="400" height="298"></a>
+  <nav aria-label="Main"><ul>
+    <li><a href="#portfolio">Portfolio</a></li><li><a href="#process">How we work</a></li><li><a href="#timelines">Timelines</a></li><li><a href="https://inasbakeer.github.io/apparate-/#faq" target="_blank" rel="noopener">FAQ</a></li>
+  </ul></nav>
+  <a class="btn grad sm" href="#start">Start a feasibility review</a>
+  <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Open menu"><span></span><span></span></button>
+</header>
+<div class="mnav" id="mnav" hidden>
+  <a href="#portfolio">Portfolio</a><a href="#process">How we work</a><a href="#timelines">Timelines</a><a href="#start">Start a feasibility review</a>
+</div>
+
+<main id="main">
+  <section class="hero" id="top" data-hero>
+    <img class="gl-img hero-img" src="img/image1.webp" alt="" width="1672" height="940" data-gl="hero" fetchpriority="high">
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="wrap hero-in">
+      <div class="kick rv"><span class="eyebrow">Apparel manufacturing &amp; quality assurance</span><span class="chip">Egypt / Local &amp; regional clients</span></div>
+      <h1 class="rv"><span class="script g">Your apparel:</span><span class="ln">managed,</span><span class="ln">manufactured,</span><span class="ln">and protected.</span></h1>
+      <div class="hero-row rv">
+        <p class="lead">Your end-to-end apparel manufacturing and quality-assurance partner in Egypt. One accountable team from the first brief to final delivery.</p>
+        <div class="ctas"><a class="btn grad" href="#start">Bring your idea to life <i class="arr"></i></a><a class="btn ghost" href="#portfolio">See our work</a></div>
+      </div>
+    </div>
+    <ul class="hero-facts wrap rv" aria-label="At a glance">
+      <li><b>7</b><span>stages in 3 phases</span></li>
+      <li><b>4</b><span>critical quality gates</span></li>
+      <li><b>10+</b><span>years of QC team experience</span></li>
+    </ul>
+  </section>
+
+  <section class="pad" id="portfolio">
+    <div class="wrap head rv">
+      <div class="eyebrow">The portfolio</div>
+      <h2>Different categories. <span class="script g">One standard.</span></h2>
+      <div class="bar"></div>
+      <div class="arrows"><button type="button" id="prev" aria-label="Previous categories">&lsaquo;</button><button type="button" id="next" aria-label="Next categories">&rsaquo;</button></div>
+    </div>
+    <div class="track" id="track" tabindex="0" aria-label="Product categories">
+      <a class="pc" href="https://inasbakeer.github.io/apparate-/#portfolio" target="_blank" rel="noopener"><img class="gl-img" data-gl="card" src="img/image58.webp" alt="Sportswear" width="1086" height="1448" loading="lazy"><span class="pc-in"><small>01</small><b>Sportswear</b><span>T-shirts, shorts &amp; leggings.</span><em>View 3 products <i class="arr"></i></em></span></a>
+      <a class="pc" href="https://inasbakeer.github.io/apparate-/#portfolio" target="_blank" rel="noopener"><img class="gl-img" data-gl="card" src="img/image65.webp" alt="Knitwear" width="1254" height="1254" loading="lazy"><span class="pc-in"><small>02</small><b>Knitwear</b><span>Coordinated sets &amp; baby knit jackets.</span><em>View 2 products <i class="arr"></i></em></span></a>
+      <a class="pc" href="https://inasbakeer.github.io/apparate-/#portfolio" target="_blank" rel="noopener"><img class="gl-img" data-gl="card" src="img/image70.webp" alt="Everyday and lifestyle" width="1024" height="1536" loading="lazy"><span class="pc-in"><small>03</small><b>Everyday &amp; lifestyle</b><span>Polos, T-shirts, hoodies, sets, tanks &amp; sleepwear.</span><em>View 7 products <i class="arr"></i></em></span></a>
+      <a class="pc" href="https://inasbakeer.github.io/apparate-/#portfolio" target="_blank" rel="noopener"><img class="gl-img" data-gl="card" src="img/image55.webp" alt="Outerwear" width="750" height="1000" loading="lazy"><span class="pc-in"><small>04</small><b>Outerwear</b><span>Structured jackets &amp; printed blousons.</span><em>View 2 products <i class="arr"></i></em></span></a>
+      <a class="pc" href="https://inasbakeer.github.io/apparate-/#portfolio" target="_blank" rel="noopener"><img class="gl-img" data-gl="card" src="img/image87.webp" alt="Baby and kids" width="1672" height="941" loading="lazy"><span class="pc-in"><small>05</small><b>Baby &amp; kids</b><span>Muslin, fleece, sets &amp; detailed kidswear.</span><em>View 13 products <i class="arr"></i></em></span></a>
+      <a class="pc" href="https://inasbakeer.github.io/apparate-/#portfolio" target="_blank" rel="noopener"><img class="gl-img" data-gl="card" src="img/image57.webp" alt="Scarves and textile accessories" width="750" height="1000" loading="lazy"><span class="pc-in"><small>06</small><b>Scarves &amp; textile accessories</b><span>Printed scarves &amp; branded tote bags.</span><em>View 6 products <i class="arr"></i></em></span></a>
+    </div>
+  </section>
+
+  <section class="proc" id="process" data-proc>
+    <div class="proc-stick">
+      <div class="wrap proc-grid">
+        <div class="proc-panel">
+          <div class="eyebrow">Our process</div>
+          <h2>One journey, <span class="script g">one accountable team.</span></h2>
+          <p class="sub">Seven stages, three phases. From plan to delivery, every step has an owner.</p>
+          <div class="phases" aria-hidden="true"><span data-ph="Plan">Plan</span><span data-ph="Develop">Develop</span><span data-ph="Produce &amp; deliver">Produce &amp; deliver</span></div>
+          <div class="stages" id="stages">
+            <article class="stage on" data-ph="Plan"><small>01 / 07</small><h3>Project onboarding</h3><p>Understand the client, market, quantity, and expectations.</p></article>
+            <article class="stage" data-ph="Plan"><small>02 / 07</small><h3>Project brief &amp; feasibility</h3><p>Review construction, materials, quality, timing, and suitability.</p></article>
+            <article class="stage" data-ph="Plan"><small>03 / 07</small><h3>Costing &amp; order confirmation</h3><p>Define commercial scope, responsibilities, approvals, and plan.</p></article>
+            <article class="stage" data-ph="Develop"><small>04 / 07</small><h3>Development &amp; sample approval</h3><p>Confirm the approved product standard before bulk production.</p></article>
+            <article class="stage" data-ph="Develop"><small>05 / 07</small><h3>Pre-production &amp; release</h3><p>Verify materials, measurements, trims, branding, packing, and approvals.</p></article>
+            <article class="stage" data-ph="Produce &amp; deliver"><small>06 / 07</small><h3>Production &amp; quality control</h3><p>Coordinate manufacturing, inspections, visibility, and corrective action.</p></article>
+            <article class="stage" data-ph="Produce &amp; deliver"><small>07 / 07</small><h3>Delivery &amp; continued support</h3><p>Confirm finishing, quantities, packing, documentation, and handover.</p></article>
+          </div>
+          <div class="dots" id="dots" role="tablist" aria-label="Process stages"></div>
+          <p class="hint">Scroll to move through the journey.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad" id="timelines">
+    <div class="wrap">
+      <div class="head rv"><div class="eyebrow">Project planning</div><h2>Clear <span class="script g">working timelines</span></h2><div class="bar"></div></div>
+      <div class="tl">
+        <div class="tcard rv"><small>Sampling</small><div class="row"><div><b data-n="5">5</b><span>approx. working days</span><em>Initial sample</em></div><div><b data-n="3">3</b><span>approx. working days</span><em>Pre-production sample</em></div></div></div>
+        <div class="tcard rv"><small>Bulk production</small><div class="row"><div><b data-n="4">4</b><span>approx. weeks</span><em>Standard production</em></div><div><b data-n="5">5</b><span>approx. weeks</span><em>Peak-season production</em></div></div></div>
+      </div>
+      <p class="note rv">Bulk-production timing begins after the required pre-production approvals and materials are confirmed. Each timeline is confirmed after reviewing complexity, fabric and trim availability, quantity, finishing, manufacturing allocation, sample requirements, and approval timing.</p>
+    </div>
+  </section>
+
+  <section class="cta" id="start" data-cta>
+    <div class="wrap cta-in">
+      <div class="eyebrow rv">Let's build a long-term partnership</div>
+      <h2 class="rv"><span class="ln">Start</span><span class="script g">with a feasibility review</span></h2>
+      <p class="lead rv">Share your product, quantity and timeline. An experienced apparel account manager will confirm the manufacturing route and the next step.</p>
+      <div class="ctas rv"><a class="btn grad" href="https://inasbakeer.github.io/apparate-/start/" target="_blank" rel="noopener">Bring your idea to life <i class="arr"></i></a></div>
+    </div>
+  </section>
+</main>
+<footer class="foot"><div class="wrap"><span>Apparate · Apparel manufacturing &amp; quality assurance, Egypt</span><span>UI sample for review. Content, photography and brand are from the current site.</span></div></footer>
+<script src="app.js" defer></script>
+</body>
+</html>
